@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".GameActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" /> <!-- 25% guideline position -->
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" /> <!-- 50% guideline position -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" /> <!-- 25% guideline position -->
+
+    <ImageView
+        android:id="@+id/elem1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tree1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tree1"
+        app:layout_constraintStart_toStartOf="@id/guideline_start25"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        android:src="@drawable/monster4"
+        app:layout_constraintStart_toStartOf="@id/guideline_start50"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        android:src="@drawable/stone1"
+        app:layout_constraintStart_toStartOf="@id/guideline_start75"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tree3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="@id/guideline_start25"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        android:src="@drawable/monster5"
+        app:layout_constraintStart_toStartOf="@id/guideline_start50"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        android:src="@drawable/stone2"
+        app:layout_constraintStart_toStartOf="@id/guideline_start75"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="@id/guideline_start25"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        android:src="@drawable/monster6"
+        app:layout_constraintStart_toStartOf="@id/guideline_start50"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/elem12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.25"
+        android:adjustViewBounds="true"
+        android:src="@drawable/stone1"
+        app:layout_constraintStart_toStartOf="@id/guideline_start75"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/platform"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/element_1"
+        android:adjustViewBounds="true"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Trinity Power</string>
+    <string name="the_screen_is_loading">The screen is loading...</string>
+    <string name="settings">Settings</string>
+</resources>
