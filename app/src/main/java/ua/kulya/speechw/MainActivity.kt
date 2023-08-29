@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private suspend fun nextScreen(){
-        delay(2000)
+        delay(1900)
         val intent = Intent(this, MenuActivity::class.java)
         startActivity(intent)
     }

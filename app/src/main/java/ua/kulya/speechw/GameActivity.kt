@@ -48,15 +48,14 @@ class GameActivity : AppCompatActivity() {
 
         val displayWidthInFloat = resources.displayMetrics.widthPixels.toFloat()
 
-
         val scope = MainScope()
         scope.launch {
             setAnimation()
         }
 
+
         binding.platform.setOnTouchListener { _, event ->
             when (event.action) {
-
                 MotionEvent.ACTION_DOWN -> {
                     initialX = binding.platform.x
                     offsetX = event.rawX - initialX
