@@ -23,6 +23,19 @@ class MenuActivity : AppCompatActivity() {
 
     }
 
+    override fun onPause() {
+        super.onPause()
+        mediaPlayer?.pause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mediaPlayer?.start()
+
+    }
+
+
+
     private fun setClickListenners(){
 
         binding.button1.setOnClickListener {
