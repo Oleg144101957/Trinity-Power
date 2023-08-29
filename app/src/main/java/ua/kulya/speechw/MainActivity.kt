@@ -12,14 +12,12 @@ class MainActivity : AppCompatActivity() {
     //Loading activity
 
     private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val scope = MainScope()
-
         scope.launch {
             nextScreen()
         }
