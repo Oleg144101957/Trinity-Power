@@ -1,9 +1,10 @@
 package ua.kulya.speechw
 
 import android.animation.Animator
-import android.animation.ValueAnimator
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.Rect
 import android.os.Bundle
@@ -14,37 +15,41 @@ import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
-import android.view.animation.TranslateAnimation
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.doOnLayout
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ua.kulya.speechw.databinding.ActivityGameBinding
+import kotlin.properties.Delegates
 import kotlin.random.Random
 
 class GameActivity : AppCompatActivity() {
 
-    private var score: Int = 1
+    private lateinit var sp: SharedPreferences
+    private var speedFromSharedPref by Delegates.notNull<Long>()
 
+    private var animationDuration by Delegates.notNull<Long>()
+
+    private var score: Int = 1
     private lateinit var binding: ActivityGameBinding
     private var initialX = 0f
-    private var offsetX = 0f
 
+    private var offsetX = 0f
     private val handler = Handler(Looper.getMainLooper())
     private val collisionCheckInterval = 100 // Milliseconds
-    private var animationDuration = 3000L
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sp = getSharedPreferences(SHARED, Context.MODE_PRIVATE)
+        speedFromSharedPref = sp.getLong(SPEED, 3000L)
+        animationDuration = speedFromSharedPref
+
 
         val displayWidthInFloat = resources.displayMetrics.widthPixels.toFloat()
 
@@ -248,6 +253,10 @@ class GameActivity : AppCompatActivity() {
             R.drawable.monster9,
             R.drawable.monster10
         )
+
+
+        const val SHARED = "SHARED"
+        const val SPEED = "SPEED"
     }
 
 
